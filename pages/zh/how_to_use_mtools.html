@@ -1,0 +1,327 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">   <meta charset="utf-8"/>
+<style>img{max-width: 100%; width:auto; height:auto;}</style>
+<style>
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}</style>
+  <title>MDReader</title>
+</head>
+<body>
+  <div id="content"><h1 id="如何使用mtools">如何使用MTools</h1>
+<p>首先，它是一个APP，我曾经用我的NFC手机--Moto X 2013将十六进制数据写回mifare 1k卡。经过几个步骤的研究和开发，我找到了一种方法从卡中读取货币数据并生成合法的十六进制 然后将数据写回卡中。 而且效果很好，让我很开心。 看起来像我是一个暗黑的黑客，可以通过一个简单的应用程序轻松改变卡上的金额。
+在那之后，我想与所有对RFID感兴趣的人分享这种快乐。 经过大约3周的开发，第一版MTools问世。
+以下是您需要了解的以更好得使用他。</p>
+<ul>
+<li>获取所有扇区的密钥</li>
+<li>比较以找到很有金额数据的扇区</li>
+<li>向MTools添加卡，扇区和密钥</li>
+<li>在嗅探器中记录每次消费后的数据</li>
+<li>比较和分析动态字节的规则</li>
+<li>完成表达式</li>
+<li>一键即充</li>
+</ul>
+<hr>
+<h2 id="获取所有扇区的密钥">获取所有扇区的密钥</h2>
+<p>一些卡片使用默认密钥，像 <code>FFFFFFFFFFFF</code> <code>000000000000</code> <code>A1B2C3D4E56F</code> 等等，你还可以通过<strong>Mifare Classic Tools</strong>尝试卡片是否使用了这些密钥。 
+如果卡未完全加密，则可能会被RFID设备爆破，比如<strong>ACR122U</strong> 或<strong>PN532</strong>。</p>
+<p>如果卡已完全加密，则只有<strong>PM3</strong>可以破解密钥。</p>
+<h2 id="比较以找到很有金额数据的扇区">比较以找到很有金额数据的扇区</h2>
+<p>使用卡的所有扇区的keyA或keyB，就可以收集数据。 并在每次消费后对它们进行比较，这样你就可以找到数据发生变化的部门，这意味着该扇区可能有金额数据。</p>
+<h2 id="向mtools添加卡-扇区和密钥">向MTools添加卡，扇区和密钥</h2>
+<p>每个扇区的第4块包括</p>
+<p><code>keyA(6 bytes) +  Access Control(4) + keyB(6)</code></p>
+<h2 id="在嗅探器中记录每次消费后的数据">在嗅探器中记录每次消费后的数据</h2>
+<p>通过添加扇区号和有效密钥，可以很容易地比较具有不同金额的数据。</p>
+<p>标记金额字节（包含货币数据）和检查字节（主要是变化的字节）</p>
+<h2 id="比较和分析动态字节的规则">比较和分析动态字节的规则</h2>
+<p>金额字节上注意十六进制或十进制，是否倒置和倍率问题。</p>
+<p>校验位请比较上下两位的和或异或值来找到规律。</p>
+<h2 id="完成表达式">完成表达式</h2>
+<p>MTools 使用<a href="http://mathparser.org/">mXparser</a> 来计算规则，请根据MTools中的提示来添加表达式。</p>
+<h2 id="一键即充">一键即充</h2>
+<p>充值前，请贴卡，然后长安$按钮模拟计算，保住数据无误后再写入。</p>
+<h2 id="one-more-thing">One more thing</h2>
+<p>MTools 支持外置设备 ACR122U，意味着就算没有NFC的手机同样可以使用MTools。</p>
+</div></body>
+</html>
