@@ -1,8 +1,8 @@
 /* colours */
 :root{
-  --primary: rgb(159, 211, 248);
-  --secondary: rgb(29, 156, 240);
-  --title: rgb(37, 37, 37);
+  --primary: #1d9cf0;
+  --secondary: #1d9cf0;
+  --title: #252525;
 }
 
 /* layout styles */
@@ -82,4 +82,10 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+
+.nav-wrapper a{
+  text-transform: capitalize;
+  font-size: larger;
+  color: white;
 }

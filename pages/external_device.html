@@ -13,7 +13,8 @@
     <link rel="manifest" , href="/manifest.json">
     <!-- ios support -->
     <link ref="apple-touch-icon" href="/icons/icon-96x96.png">
-    <meta name="apple-mobile-web-app-status-bar" content="#9fd3f8">
+    <meta name="theme-color" content="#1d9cf0">
+    <meta name="apple-mobile-web-app-status-bar" content="#1d9cf0">
     <meta name="theme-color" content="#9fd3f8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZFGBP9DBM"></script>
@@ -29,10 +30,10 @@
 <body class="grey lighten-4">
     <!-- top nav -->
     <div class="navbar-fixed">
-        <nav class="z-depth-0">
+        <nav class="z-depth-1">
             <div class="nav-wrapper container">
                 <a href="/">MTools Doc</a>
-                <span class="right grey-text text-darken-1">
+                <span class="right white-text">
                     <i class="material-icons sidenav-trigger" data-target="side-menu">menu</i>
                 </span>
             </div>
@@ -42,8 +43,11 @@
     <!-- side nav -->
     <ul id="side-menu" class="sidenav side-menu">
         <li><a class="subheader">MENU</a></li>
-        <li><a href="/" class="waves-effect">Home</a></li>
-        <li><a href="/pages/external_device.html" class="waves-effect">External Device</a></li>
+        <li><a href="/" class="waves-effect"><i class="material-icons">home</i>Home</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=tk.toolkeys.mtools" target="_balnk"
+                class="waves-effect"><i class="material-icons">android</i>Download</a></li>
+        <li><a href="/pages/external_device.html" class="waves-effect"><i class="material-icons">usb</i>External
+                Device</a></li>
         <li>
             <div class="divider"></div>
         </li>
@@ -51,6 +55,7 @@
                 <i class="material-icons">mail_outline</i>About</a>
         </li>
     </ul>
+
     <div class="row">
         <div class="col s12 m4">
             <div class="card hoverable" style="margin: 10px;">
